@@ -1,0 +1,59 @@
+{
+  "network": {
+    "vehicle_ip": "192.168.1.20",
+    "local_ip": "127.0.0.1",
+    "doip_port": 13400,
+    "uds_port": 13400,
+    "tcp_forward_port": 13401,
+    "udp_forward_port": 13402,
+    "connection_timeout": 5,
+    "retry_attempts": 3
+  },
+  "ui": {
+    "theme": "bmw_professional",
+    "window_width": 1400,
+    "window_height": 900,
+    "auto_scroll": true,
+    "max_log_entries": 1000,
+    "font_family": "Consolas",
+    "font_size": 10
+  },
+  "diagnostics": {
+    "auto_connect": false,
+    "enable_live_monitoring": true,
+    "can_analysis_enabled": true,
+    "network_analysis_enabled": true,
+    "save_session_logs": true,
+    "export_format": "json"
+  },
+  "forwarding": {
+    "auto_start": false,
+    "enable_tcp": true,
+    "enable_udp": true,
+    "buffer_size": 4096,
+    "max_connections": 10,
+    "log_packets": true
+  },
+  "can": {
+    "auto_parse": true,
+    "enable_realtime": true,
+    "buffer_size": 10000,
+    "export_interval": 300,
+    "filter_duplicates": true
+  },
+  "security": {
+    "validate_packets": true,
+    "enable_encryption": false,
+    "max_packet_size": 65536,
+    "blacklisted_ips": [],
+    "whitelisted_ips": []
+  },
+  "logging": {
+    "log_level": "INFO",
+    "max_log_size": "10MB",
+    "backup_count": 5,
+    "log_format": "%(asctime)s - %(levelname)s - %(message)s",
+    "enable_file_logging": true,
+    "enable_console_logging": true
+  }
+}

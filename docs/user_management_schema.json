@@ -1,0 +1,240 @@
+{
+  "documentation": {
+    "title": "AQ///BIMMER User Management System",
+    "version": "Flutter Desktop 2024",
+    "language": "Dart/Flutter",
+    "compatible_with": ["main.py", "adminTool.py", "po.py", "user_management_tab.py"]
+  },
+  
+  "github_config": {
+    "tokens": ["<GITHUB_TOKEN_FROM_ENVIRONMENT>"],
+    "repo_owner": "tiraUnderCode23",
+    "repo_name": "AQ",
+    "branch": "main",
+    "files": {
+      "users": "users.json",
+      "applications": "applications.json",
+      "activations_folder": "activations/"
+    }
+  },
+
+  "data_structures": {
+    "user": {
+      "id": "string - timestamp ID",
+      "name": "string - full name",
+      "email": "string - unique email",
+      "phone": "string - phone number",
+      "password": "string - SHA256 hashed",
+      "hwid": "string - 32 char device ID",
+      "registration_date": "string - ISO 8601",
+      "last_active": "string - ISO 8601",
+      "last_login": "string - ISO 8601",
+      "activations": "number - activation count",
+      "status": "string - pending|active|inactive",
+      "platform": "string - windows|android|ios|macos|linux"
+    },
+    "application": {
+      "id": "string - timestamp ID",
+      "name": "string - full name",
+      "email": "string - unique email",
+      "phone": "string - phone number",
+      "password": "string - SHA256 hashed",
+      "hwid": "string - 32 char device ID",
+      "registration_time": "string - ISO 8601",
+      "status": "string - always 'pending'",
+      "platform": "string - OS name"
+    },
+    "activation_file": {
+      "path_format": "activations/{email}_activation.dat",
+      "email_transform": "@ → _at_, . → _dot_",
+      "content": "string - activation code only",
+      "code_format": "XXXXX-XXXXXXXX-XXXXX"
+    }
+  },
+
+  "workflows": {
+    "registration": {
+      "steps": [
+        "1. User fills registration form (name, email, phone, password)",
+        "2. Check if email already exists in users.json",
+        "3. Hash password with SHA256",
+        "4. Generate HWID for device",
+        "5. Create application object",
+        "6. Add to applications.json on GitHub",
+        "7. Status set to 'pending'"
+      ],
+      "endpoint": "PUT https://api.github.com/repos/{owner}/{repo}/contents/applications.json"
+    },
+    "approval": {
+      "steps": [
+        "1. Admin reviews pending application in adminTool",
+        "2. Admin clicks 'Approve' or 'Generate Activation'",
+        "3. Generate activation code (XXXXX-XXXXXXXX-XXXXX)",
+        "4. Create activation file on GitHub",
+        "5. Move user from applications.json to users.json",
+        "6. Send activation code to user (WhatsApp/Email)",
+        "7. Status changed to 'active'"
+      ],
+      "activation_file_creation": {
+        "filename": "{email.replace('@','_at_').replace('.','_dot_')}_activation.dat",
+        "content": "activation_code",
+        "encoding": "base64 for GitHub API"
+      }
+    },
+    "activation": {
+      "by_key": {
+        "steps": [
+          "1. User enters activation code",
+          "2. Fetch all users from users.json and applications.json",
+          "3. Search for matching activation file",
+          "4. Verify HWID matches or is empty",
+          "5. Update HWID if empty",
+          "6. Save activation locally",
+          "7. Grant access to application"
+        ]
+      },
+      "by_login": {
+        "steps": [
+          "1. User enters email and password",
+          "2. Fetch users from GitHub",
+          "3. Find user by email",
+          "4. Verify password hash",
+          "5. Check activation file exists",
+          "6. Verify HWID",
+          "7. Save activation locally"
+        ]
+      }
+    },
+    "deactivation": {
+      "steps": [
+        "1. Admin selects user in adminTool",
+        "2. Admin clicks 'Deactivate'",
+        "3. Delete activation file from GitHub",
+        "4. User status becomes 'inactive'",
+        "5. User cannot access application"
+      ]
+    }
+  },
+
+  "hwid_generation": {
+    "algorithm": "SHA256",
+    "input_format": "{computerName}_{deviceId}",
+    "output_length": 32,
+    "output_format": "uppercase hex",
+    "platforms": {
+      "windows": "windowsInfo.computerName + windowsInfo.deviceId",
+      "android": "brand + model + id",
+      "ios": "name + identifierForVendor",
+      "macos": "computerName + systemGUID",
+      "linux": "name + machineId"
+    }
+  },
+
+  "local_storage": {
+    "provider": "SharedPreferences",
+    "keys": {
+      "isActivated": "bool",
+      "email": "string",
+      "activationCode": "string",
+      "username": "string",
+      "phoneNumber": "string",
+      "activationDate": "string (ISO 8601)",
+      "expirationDate": "string (ISO 8601)",
+      "pendingEmail": "string",
+      "registrationStatus": "string (none|pending|activated)"
+    }
+  },
+
+  "api_endpoints": {
+    "raw_url": "https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{file}",
+    "api_url": "https://api.github.com/repos/{owner}/{repo}/contents/{file}",
+    "methods": {
+      "read": "GET",
+      "create_update": "PUT",
+      "delete": "DELETE"
+    },
+    "headers": {
+      "Authorization": "token {github_token}",
+      "Accept": "application/vnd.github.v3+json",
+      "Content-Type": "application/json"
+    }
+  },
+
+  "rate_limiting": {
+    "strategy": "Token rotation + wait",
+    "tokens_count": "Multiple tokens supported",
+    "rotation_trigger": "HTTP 403 response",
+    "wait_threshold": "rateLimitRemaining <= 10",
+    "headers_to_read": ["x-ratelimit-remaining", "x-ratelimit-reset"]
+  },
+
+  "security": {
+    "password_hashing": "SHA256",
+    "device_binding": "HWID verification",
+    "token_management": "Multiple tokens with rotation",
+    "double_verification": "Activation file + user data"
+  },
+
+  "functions": {
+    "registration": [
+      "registerUser(name, email, phone, password)",
+      "_generateHWID()",
+      "_emailToFilename(email)"
+    ],
+    "activation": [
+      "activateWithKey(key)",
+      "login(email, password)",
+      "verifyActivationWithGitHub()",
+      "checkPendingActivation()"
+    ],
+    "github_operations": [
+      "_getUsersFromGitHub()",
+      "_getApplicationsFromGitHub()",
+      "_getAllUsersFromGitHub()",
+      "_getActivationFileFromGitHub(email)",
+      "_updateUserHWID(email, hwid)",
+      "_deleteActivationFileFromGitHub(email)",
+      "_removeUserFromGitHub(email)"
+    ],
+    "local_storage": [
+      "_loadSavedActivation()",
+      "_saveActivation()",
+      "_clearActivation()",
+      "savePendingRegistration(email)",
+      "getPendingRegistrationEmail()"
+    ],
+    "utility": [
+      "generateActivationCode()",
+      "_rotateToken()",
+      "_checkRateLimit()",
+      "_updateRateLimitInfo(response)"
+    ]
+  },
+
+  "ui_modes": {
+    "0": {
+      "name": "Activation Key",
+      "fields": ["activationCode"]
+    },
+    "1": {
+      "name": "Login",
+      "fields": ["email", "password"]
+    },
+    "2": {
+      "name": "Register",
+      "fields": ["name", "email", "phone", "password", "confirmPassword"]
+    }
+  },
+
+  "support": {
+    "whatsapp": "+972528180757"
+  },
+
+  "notes": [
+    "نظام التفعيل يتوافق تماماً مع نسخة Python",
+    "HWID يربط كل تفعيل بجهاز واحد فقط",
+    "يمكن للمستخدم حذف تسجيله وإعادة التسجيل",
+    "التطبيق يتحقق تلقائياً من التفعيل عند البدء",
+    "دعم كامل لجميع أنظمة التشغيل"
+  ]
+}

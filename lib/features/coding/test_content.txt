@@ -1,0 +1,38 @@
+﻿import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
+
+import '../../core/theme/app_theme.dart';
+import '../../widgets/glass_card.dart';
+
+/// Coding data model - matches Python version exactly
+class CodingItem {
+  final String id;
+  final String ecu;
+  final String title;
+  final String description;
+  final String function;
+  final List<String> steps;
+  final String series;
+  final String? submittedBy;
+  final String? submissionDate;
+  final String status;
+  final String version;
+
+  CodingItem({
+    required this.id,
+    required this.ecu,
+    this.title = '',
+    this.description = '',
+    this.function = '',
+    this.steps = const [],
+    this.series = '',
+    this.submittedBy,
+    this.submissionDate,
+    this.status = 'active',
+    this.version = '1.0',
+  });
+
+  factory CodingItem.fromJson(Map<String, dynamic> json) {
+    List<String> parseSteps(dynamic ste

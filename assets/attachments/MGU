@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><bmwprovsigned>
+    <bmwprov Certificate="" SignatureAlgo="0x51" SignatureDate="20230607175350Z" environment="PROD" timestamp="2023-06-07T17:53:50" type="ota" uuid="ddb47cd6-b791-4129-a8df-602a5" vin="WBACV61000LJ72069">
+        <set>
+            <data>
+                <fleet_interact_data allowed="false" appStartType="manually" enabled="false" userLoginRequired="false"/>
+                <prov>
+                    <ota_reception_mode>joynr</ota_reception_mode>
+                </prov>
+                <oap-bon-newsnext allowed="false" appStartType="lum" enabled="false" userLoginRequired="true">
+                    <service_url>https://ccis-ise.prod.cd-emea.bmw.cloud:5970</service_url>
+                </oap-bon-newsnext>
+                <joynr>
+                    <max_ttl_ms>2592000000</max_ttl_ms>
+                    <discovery_messages_ttl>1814400000</discovery_messages_ttl>
+                    <send_msg_retry_interval>500</send_msg_retry_interval>
+                    <mqtt_keep_alive>60</mqtt_keep_alive>
+                    <mqtt_connection_timeout>1000</mqtt_connection_timeout>
+                    <mqtt_broker_url>tcp://mqtt.prod.cd-emea.bmw:8883</mqtt_broker_url>
+                </joynr>
+                <necema>
+                    <hub>EMEA_RoW</hub>
+                    <root_cname>VehicleBackend-Root-EMEA-CA1</root_cname>
+                    <hub_cert_url>https://uds.prod.cd-emea.bmw:5630/hubcertretr/hubcas.xml</hub_cert_url>
+                    <be_crl_url_root>http://uds.prod.cd-emea.bmw:5631/crls/beroot.crls</be_crl_url_root>
+                    <be_crl_url_hub>http://uds.prod.cd-emea.bmw:5631/crls/behub.crls</be_crl_url_hub>
+                    <be_crl_url_rsu>http://uds.prod.cd-emea.bmw:5631/crls/bersu.crls</be_crl_url_rsu>
+                    <be_crl_url_tls>http://uds.prod.cd-emea.bmw:5631/crls/tls.crls</be_crl_url_tls>
+                    <bocs_url>https://bocs.prod.cd-emea.bmw:5520/request/type2</bocs_url>
+                </necema>
+                <pinguin enabled="false">
+                    <proxy_cfg_url/>
+                    <url/>
+                    <polling_interval/>
+                    <keep_alive_timeout>120</keep_alive_timeout>
+                </pinguin>
+                <oap>
+                    <analytics>
+    <active>true</active>
+    <loglevel>info</loglevel>
+</analytics>
+                    <app_analytics>
+    <active>true</active>
+<url>https://insight.prod.cd-emea.bmw:5175</url>
+                    </app_analytics>
+                </oap>
+                <cdc_headunit>
+                    <scan_interval>100</scan_interval>
+                    <bulk_min_size>524288</bulk_min_size>
+                    <bulk_max_size>5242880</bulk_max_size>
+                    <bulk_flush_interval>3600</bulk_flush_interval>
+                    <bulk_ttl_limit>120</bulk_ttl_limit>
+                    <fast_min_size>10240</fast_min_size>
+                    <fast_max_size>20480</fast_max_size>
+                    <fast_flush_interval>3600</fast_flush_interval>
+                    <fast_ttl_limit>120</fast_ttl_limit>
+                    <fast_immediate_send_prio>127</fast_immediate_send_prio>
+                    <joynr_soft_limit>10240</joynr_soft_limit>
+                    <conditional_sub_priority>128</conditional_sub_priority>
+                    <conditional_sub_time_to_live>3000</conditional_sub_time_to_live>
+                    <conditional_sub_startup_delay>3000</conditional_sub_startup_delay>
+                </cdc_headunit>
+                <smart_charge allowed="false" enabled="false"/>
+                <mlaptimer allowed="true" appStartType="manually" enabled="true" userLoginRequired="true"/>
+                <soda-oap allowed="false" appStartType="manually" enabled="false" userLoginRequired="false"/>
+                <psr-oap allowed="false" appStartType="autostart" enabled="false" userLoginRequired="false"/>
+                <home-assistant allowed="false" appStartType="manually" enabled="false" userLoginRequired="true"/>
+                <dumm>
+                    <proxy_cfg_url/>
+                    <default_transfer_finished_timeout>1800</default_transfer_finished_timeout>
+                    <max_transfer_finished_timeout>36000</max_transfer_finished_timeout>
+                    <min_transfer_finished_timeout>10</min_transfer_finished_timeout>
+                    <default_transfer_status_update_timeout>10</default_transfer_status_update_timeout>
+                    <max_transfer_status_update_timeout>60</max_transfer_status_update_timeout>
+                    <min_transfer_status_update_timeout>1</min_transfer_status_update_timeout>
+                    <http_response_timeout>60</http_response_timeout>
+                    <http_request_processing_timeout>900</http_request_processing_timeout>
+                    <wait_retry_timeout>10</wait_retry_timeout>
+                    <abort_pause_timeout>900</abort_pause_timeout>
+                    <use_gzip>true</use_gzip>
+                    <parallel_transfers>6</parallel_transfers>
+                    <max_part_size>26214400</max_part_size>
+                    <max_file_size>1073741824</max_file_size>
+                </dumm>
+                <driveid>
+                    <transfer_finished_timeout>28800</transfer_finished_timeout>
+                    <proxy_cfg_url/>
+                    <url>https://driveid.prod.cd-emea.bmw.cloud:5670/service/api/driveId</url>
+                </driveid>
+                <usso>
+                    <proxy_cfg_url/>
+                    <ack_timeout>300</ack_timeout>
+                    <ok_timeout>0</ok_timeout>
+                    <auth>MGU</auth>
+                    <transfer_finished_timeout>60</transfer_finished_timeout>
+                    <min_refresh_timeout>180</min_refresh_timeout>
+                    <redirect_uri/>
+                    <registrationTimeout>180</registrationTimeout>
+                    <url>https://gcdm.prod.cd-emea.bmw:5655/cac/token/v1</url>
+                    <deviceCode_url>https://gcdm.prod.cd-emea.bmw:5655/cac/device/v1/create</deviceCode_url>
+                    <deviceCodeError_url>https://gcdm.prod.cd-emea.bmw:5655/cac/device/v1/cancel</deviceCodeError_url>
+                </usso>
+                <fleet_interact allowed="false" appStartType="manually" enabled="false" userLoginRequired="false"/>
+                <oapcontroller enabled="true">
+                    <oap_debug>0</oap_debug>
+                    <ma_cpu_limit_percent>100</ma_cpu_limit_percent>
+                    <hu_oap_memory_low>1894400</hu_oap_memory_low>
+                    <hu_oap_memory_out>1996800</hu_oap_memory_out>
+                    <hu_ma_memory_low>163840</hu_ma_memory_low>
+                    <hu_ma_memory_out>504800</hu_ma_memory_out>
+                    <rse_oap_memory_low>512000</rse_oap_memory_low>
+                    <rse_oap_memory_out>614400</rse_oap_memory_out>
+                    <rse_ma_memory_low>163840</rse_ma_memory_low>
+                    <rse_ma_memory_out>204800</rse_ma_memory_out>
+                </oapcontroller>
+                <rsu allowed="false" enabled="true" enabled_by_customer="true">
+                    <rsu_timer>42</rsu_timer>
+                </rsu>
+                <store allowed="true" appStartType="manually" enabled="true" userLoginRequired="true">
+                    <homecountry>DE</homecountry>
+                    <service_url>https://cdp.prod.cd-emea.bmw:5590/vehicle/id7/rest/store</service_url>
+                </store>
+                <x_call allowed="true" appStartType="autostart" enabled="true" userLoginRequired="false">
+                    <show_submenu enabled="true"/>
+                    <timeout_crqm>10</timeout_crqm>
+                    <speech_sos_guidance_intents enabled="true"/>
+                    <services>
+	<b_call enabled="true">
+	    <third_party_call enabled="false"/>
+    </b_call>
+	<i_call enabled="false">
+	    <show_navi_entrybutton enabled="false"/>
+	</i_call>
+	<h_call enabled="true"/>
+	<s_call enabled="false">
+		<dataonly enabled="true"/>
+		<entry_cbs_view enabled="false"/>
+		<open_service_partner_via_ccm enabled="true"/>
+	</s_call>
+	<a_call enabled="true">
+		<active_automatic enabled="true"/>
+		<active_manual enabled="true"/>
+		<active_dataonly enabled="false"/>
+		<third_party_call enabled="false"/>
+		<data_del_threshold_ignition>0</data_del_threshold_ignition>
+		<data_del_threshold_time>20160</data_del_threshold_time>
+		<auto_send_damage_data enabled="true"/>
+		<auto_send_counters enabled="true"/>
+		<auto_dmg_level_threshold>2</auto_dmg_level_threshold>
+		<auto_checkcontrol enabled="true"/>
+		<auto_hmi_notification_repeats>2</auto_hmi_notification_repeats>
+		<auto_countdown_enabled enabled="false"/>
+		<auto_countdown_seconds>5</auto_countdown_seconds>
+		<dataonly_send_damage_data enabled="true"/>
+		<dataonly_send_counters enabled="true"/>
+		<dataonly_dmg_level_threshold>1</dataonly_dmg_level_threshold>
+	</a_call>
+</services>
+                    <hv_battery_event enabled="false"/>
+                    <third_party_name>https://providerinfo.prod.cd-emea.bmw.cloud:5135/api/v1/service-providers</third_party_name>
+                </x_call>
+                <ts_servicecall allowed="true" appStartType="manually" enabled="true" userLoginRequired="true">
+                    <asc enabled="true"/>
+                    <cbs_asc_blacklist>
+	<cbs_id/>
+	<cbs_id/>
+</cbs_asc_blacklist>
+                </ts_servicecall>
+                <ts_battery_guard allowed="true" appStartType="manually" enabled="true" userLoginRequired="true"/>
+                <ts_report allowed="false" appStartType="manually" enabled="false" userLoginRequired="false"/>
+                <ts_logbook allowed="false" appStartType="autostart" enabled="false" userLoginRequired="false"/>
+                <ts_service_partner allowed="true" appStartType="manually" enabled="true" userLoginRequired="true">
+                    <homecountry>DE</homecountry>
+                    <entrypoint_cbs enabled="true"/>
+                    <third_party enabled="false"/>
+                    <manual_service_call enabled="false"/>
+                    <breakdown_call enabled="true" third_party="false"/>
+                    <service_url>https://cdp.prod.cd-emea.bmw:5590/vehicle/id7/rest/servicepartner</service_url>
+                </ts_service_partner>
+                <ts_diagnostic_service allowed="true" appStartType="autostart" enabled="true" userLoginRequired="false"/>
+                <ts_rsu_report allowed="true" appStartType="manually" enabled="true" userLoginRequired="true"/>
+                <smart_access allowed="true" enabled="true">
+                    <keep_alive_timeout>120000</keep_alive_timeout>
+                </smart_access>
+                <fuelprice_native allowed="true" appStartType="manually" enabled="true" userLoginRequired="true">
+                    <joynrDomain>inf.los</joynrDomain>
+                    <dyn_results_max>100</dyn_results_max>
+                    <dyn_intervall_min>60</dyn_intervall_min>
+                    <data_validity_min>80</data_validity_min>
+                    <dyn_monitor_activation_min>45</dyn_monitor_activation_min>
+                    <dyn_intervall_monitor_min>5</dyn_intervall_monitor_min>
+                    <timer>300</timer>
+                    <retry>2</retry>
+                </fuelprice_native>
+                <ev_stations allowed="false" enabled="false">
+                    <joynrDomain>inf.los</joynrDomain>
+                    <dyn_results_max>100</dyn_results_max>
+                    <dyn_intervall_min>4</dyn_intervall_min>
+                    <data_validity_min>20</data_validity_min>
+                    <dyn_monitor_activation_min>45</dyn_monitor_activation_min>
+                    <dyn_intervall_monitor_min>5</dyn_intervall_monitor_min>
+                    <timer>300</timer>
+                    <retry>2</retry>
+                </ev_stations>
+                <parknow_data enabled="true">
+                    <app_id>a41812a1-5bd8-411a-823a-dc7f4fa57e8c</app_id>
+                    <app_key>8021ce93-ae3d-4512-9f82-f82f3980f4bf</app_key>
+                    <parkin_length>180</parkin_length>
+                    <parkout_length>10</parkout_length>
+                    <radtoparking>25</radtoparking>
+                    <frequency>1</frequency>
+                    <timer>60</timer>
+                    <retry>10</retry>
+                    <frclevel>1</frclevel>
+                    <distanceintersection>2</distanceintersection>
+                    <validity>90</validity>
+                    <validity_random_offset>10</validity_random_offset>
+                    <maxevents>90</maxevents>
+                    <maxevents_random_offset>5</maxevents_random_offset>
+                    <time_offset>0</time_offset>
+                    <time_offset_random_offset>0</time_offset_random_offset>
+                    <whiteout_time>1</whiteout_time>
+                    <whiteout_time_random_offset>0</whiteout_time_random_offset>
+                    <uss_collection_mode>2</uss_collection_mode>
+                    <uss_collection_area>1</uss_collection_area>
+                    <uss_upload_method>CDC</uss_upload_method>
+                    <spot_interval_low_seconds>60</spot_interval_low_seconds>
+                    <spot_interval_high_seconds>30</spot_interval_high_seconds>
+                    <additional_parking_space_cm>95</additional_parking_space_cm>
+                    <include_park_in_time>true</include_park_in_time>
+                    <time_resolution_minutes>5</time_resolution_minutes>
+                    <interactive_position_check_interval_seconds>2</interactive_position_check_interval_seconds>
+                    <gomp_request_distance_meters>1500</gomp_request_distance_meters>
+                    <uplink_url>https://erdparking.prod.cd-emea.bmw.cloud:5875/parking/mgu</uplink_url>
+                    <token_url>https://ospi.prod.cd-emea.bmw.cloud:5220/service/api/park-eu</token_url>
+                    <general_parking_situation>
+    <url>https://pafggps.prod.cd-emea.bmw.cloud:5230/ggps/v1/parkingsituations</url>
+</general_parking_situation>
+                </parknow_data>
+                <parknow_customer enabled="true">
+                    <maxtimefreedparking>300</maxtimefreedparking>
+                    <maxnumberfreedparking>10</maxnumberfreedparking>
+                    <thememapdistance>2000</thememapdistance>
+                    <spots_only_interval>60</spots_only_interval>
+                    <use_cngw_token>true</use_cngw_token>
+                    <gsap_refresh_interval>7</gsap_refresh_interval>
+                    <filters>1,2,5</filters>
+                    <max_gomp_fmm_distance_meters>200000</max_gomp_fmm_distance_meters>
+                    <interval1>180</interval1>
+                    <interval2>150</interval2>
+                    <interval3>180</interval3>
+                    <gomp_distance_full_ag>2000</gomp_distance_full_ag>
+                    <downlink_url_area>https://ospi.prod.cd-emea.bmw.cloud:5220/service/api/park-eu</downlink_url_area>
+                    <downlink_url_opap>https://ospi.prod.cd-emea.bmw.cloud:5220/service/api/park-eu</downlink_url_opap>
+                    <downlink_url_availability>https://ospi.prod.cd-emea.bmw.cloud:5220/service/api/park-eu</downlink_url_availability>
+                    <downlink_url_gfp>https://ospi.prod.cd-emea.bmw.cloud:5220/service/api/park-eu</downlink_url_gfp>
+                </parknow_customer>
+                <parknow_poi allowed="true" enabled="true">
+                    <joynrDomain>inf.los</joynrDomain>
+                    <dyn_results_max>100</dyn_results_max>
+                    <dyn_intervall_min>15</dyn_intervall_min>
+                    <data_validity_min>20</data_validity_min>
+                    <dyn_monitor_activation_min>45</dyn_monitor_activation_min>
+                    <dyn_intervall_monitor_min>5</dyn_intervall_monitor_min>
+                    <list_number_pois>100</list_number_pois>
+                    <timer>300</timer>
+                    <retry>2</retry>
+                </parknow_poi>
+                <parking_finder enabled="true">
+                    <parkingFinderBackend>
+	<joynrDomain>nav.paf</joynrDomain>
+<url>https://paf.prod.cd-emea.bmw.cloud:5900/paf/v1</url>
+                    </parkingFinderBackend>
+                    <distancedestination>1500</distancedestination>
+                    <refreshinterval>600</refreshinterval>
+                    <ospiOnly>true</ospiOnly>
+                    <homeCountry>DE</homeCountry>
+                    <force_online_first_poi>false</force_online_first_poi>
+                    <routeEncoding>ROUTE_ENCODING_LLR</routeEncoding>
+                    <psrExportRouteEncoding>agorac</psrExportRouteEncoding>
+                </parking_finder>
+                <poi_search allowed="true" enabled="true">
+                    <alert_poi>
+	<alert_along>
+		<category id="0">
+			<car_speed_km_h>80</car_speed_km_h>
+			<car_speed_mls_h>50</car_speed_mls_h>
+			<radius_km_along>0.5</radius_km_along>
+			<distance_km_along_slow>0.3</distance_km_along_slow>
+			<distance_km_along_fast>0.6</distance_km_along_fast>
+			<deviation_distance_km>5</deviation_distance_km>
+		</category>
+		<category id="40200">
+			<car_speed_km_h>80</car_speed_km_h>
+			<car_speed_mls_h>50</car_speed_mls_h>
+			<radius_km_along>0.5</radius_km_along>
+			<distance_km_along_slow>0.3</distance_km_along_slow>
+			<distance_km_along_fast>0.6</distance_km_along_fast>
+			<deviation_distance_km>1</deviation_distance_km>
+		</category>
+	</alert_along> 
+	<alert_around>
+		<category id="0">
+			<car_speed_km_h>80</car_speed_km_h>
+			<car_speed_mls_h>50</car_speed_mls_h>
+			<radius_km_around_slow>0.2</radius_km_around_slow>
+			<radius_km_around_fast>0.5</radius_km_around_fast>
+		</category>
+		<category id="40200">
+			<car_speed_km_h>80</car_speed_km_h>
+			<car_speed_mls_h>50</car_speed_mls_h>
+			<radius_km_around_slow>0.2</radius_km_around_slow>
+			<radius_km_around_fast>0.5</radius_km_around_fast>
+		</category>
+	</alert_around> 
+</alert_poi>
+                    <map_set_01>
+	<map_region>01,02,03,04</map_region>
+	<cat_set_01>
+		<radius_km_along>0.75</radius_km_along>
+		<categories_along>13000</categories_along>
+		<radius_km_around>500</radius_km_around>
+		<categories_around>13000</categories_around>
+	</cat_set_01>
+	<cat_set_02>
+		<radius_km_along>0.5</radius_km_along>
+		<categories_along>14010</categories_along>
+		<radius_km_around>1000</radius_km_around>
+		<categories_around>14010</categories_around>
+	</cat_set_02>
+</map_set_01>
+                    <map_set_02>
+	<map_region>10,11,12,13,14,15,16,17,18,19,20,21</map_region>
+	<cat_set_01>
+		<radius_km_along>0.75</radius_km_along>
+		<categories_along>13000</categories_along>
+		<radius_km_around>500</radius_km_around>
+		<categories_around>13000</categories_around>
+	</cat_set_01>
+	<cat_set_02>
+		<radius_km_along>0.5</radius_km_along>
+		<categories_along>14010</categories_along>
+		<radius_km_around>1000</radius_km_around>
+		<categories_around>14010</categories_around>
+	</cat_set_02>
+</map_set_02>
+                </poi_search>
+                <weather allowed="true" appStartType="manually" enabled="true" userLoginRequired="true">
+                    <homecountry>DE</homecountry>
+                    <service_url>https://cdp.prod.cd-emea.bmw:5590/vehicle/id7/rest/weather</service_url>
+                </weather>
+                <map_update allowed="false" enabled="false">
+                    <joynrDomain>nav.mupi.cloud</joynrDomain>
+                    <norouteoutsideareabuffer>0</norouteoutsideareabuffer>
+                    <routeoutsideareabuffer>0</routeoutsideareabuffer>
+                    <updatetypes>FULL_DB,TRAFFIC_PATTERNS</updatetypes>
+                    <updateregionsforota/>
+                    <maxdownloadsize>20000000</maxdownloadsize>
+                    <retryintervalfixed>10</retryintervalfixed>
+                    <retryintervalvariable>15</retryintervalvariable>
+                    <priority>100</priority>
+                </map_update>
+                <livelayer_poi allowed="false" enabled="true">
+                    <norouteoutsideareabuffer>30000</norouteoutsideareabuffer>
+                    <routeoutsideareabuffer>30000</routeoutsideareabuffer>
+                    <updatetypes>POI_DB</updatetypes>
+                    <updateregionsforota/>
+                    <maxdownloadsize>5000000</maxdownloadsize>
+                    <retryintervalfixed>10</retryintervalfixed>
+                    <retryintervalvariable>15</retryintervalvariable>
+                    <priority>140</priority>
+                </livelayer_poi>
+                <livelayer_adas allowed="false" enabled="false">
+                    <norouteoutsideareabuffer>30000</norouteoutsideareabuffer>
+                    <routeoutsideareabuffer>30000</routeoutsideareabuffer>
+                    <updatetypes>ADAS_DB</updatetypes>
+                    <updateregionsforota/>
+                    <maxdownloadsize>5000000</maxdownloadsize>
+                    <retryintervalfixed>10</retryintervalfixed>
+                    <retryintervalvariable>15</retryintervalvariable>
+                    <priority>180</priority>
+                </livelayer_adas>
+                <livelayer_fas allowed="false" enabled="false">
+                    <norouteoutsideareabuffer>30000</norouteoutsideareabuffer>
+                    <routeoutsideareabuffer>30000</routeoutsideareabuffer>
+                    <updatetypes>ADAS_FAS</updatetypes>
+                    <updateregionsforota/>
+                    <maxdownloadsize>5000000</maxdownloadsize>
+                    <retryintervalfixed>10</retryintervalfixed>
+                    <retryintervalvariable>15</retryintervalvariable>
+                    <priority>160</priority>
+                </livelayer_fas>
+                <livelayer_sat allowed="false" enabled="false">
+                    <updatetypes>SAT</updatetypes>
+                    <staticradius>25000</staticradius>
+                    <triggerradius>15000</triggerradius>
+                    <corridorsize>2000</corridorsize>
+                    <routeforesight>50000</routeforesight>
+                    <retryintervalfixed>10</retryintervalfixed>
+                    <retryintervalvariable>15</retryintervalvariable>
+                    <priority>120</priority>
+                </livelayer_sat>
+                <contactloc allowed="false" appStartType="manually" enabled="false" hasEntryPointButton="true" userLoginRequired="true"/>
+                <carasso allowed="false" enabled="false">
+                    <carasso_config>https://carasso.prod.cd-emea.bmw:5710/carasso_config</carasso_config>
+                </carasso>
+                <wifi_hotspot allowed="false" enabled="false"/>
+                <speech2text allowed="true" enabled="true">
+                    <hvd enabled="true"/>
+                    <dictation enabled="true"/>
+                    <htts enabled="true"/>
+                    <ext_poi enabled="true"/>
+                    <poi_version>3.0</poi_version>
+                    <ptt_version enabled="false"/>
+                    <third_party_keywords enabled="true"/>
+                    <proxy_cfg_url/>
+                    <hvd_url>https://hvd.prod.cd-emea.bmw:5540/hvd</hvd_url>
+                    <htts_url>https://htts.prod.cd-emea.bmw:5660/htts</htts_url>
+                    <ext_providername>https://stt.prod.cd-emea.bmw:5650/com/stt</ext_providername>
+                </speech2text>
+                <tpeg allowed="true" enabled="true">
+                    <interval>3</interval>
+                    <decoding_feat>123</decoding_feat>
+                    <tec_push>false</tec_push>
+                    <RequestGeneration>gtm3</RequestGeneration>
+                    <TIIconColoring>0,1;8;0,05;3</TIIconColoring>
+                    <DetourLogic>0,25;3,75;3;50;5;1,5;100</DetourLogic>
+                    <downlink_url>https://rtti.prod.cd-emea.bmw.cloud:5560/service/api/default</downlink_url>
+                    <countries>000000000000000010028002408010000521800002000d8002c8010508217ff9</countries>
+                </tpeg>
+                <xfcd allowed="false" enabled="false">
+                    <joynrDomain>nav.xfcd</joynrDomain>
+                    <trace_point_interval>12</trace_point_interval>
+                    <number_of_trace_points>5</number_of_trace_points>
+                    <street_type_filter>1,2,21,22,23,24</street_type_filter>
+                    <label/>
+                    <tracking_threshold>300</tracking_threshold>
+                </xfcd>
+                <fcev-oap allowed="false" appStartType="autostart" enabled="false" userLoginRequired="false">
+                    <url_station>
+	<domain>fcev.prod.cd-emea.bmw.cloud</domain>
+	<path>/getStations</path>
+	<port>5385</port>
+</url_station>
+                    <url_dl>
+	<domain_dl>fcev-dl.prod.cd-emea.bmw.cloud</domain_dl>
+	<path_dl>/fcev-bucket</path_dl>
+	<port_dl>5395</port_dl>
+</url_dl>
+                </fcev-oap>
+                <preheating allowed="false" appStartType="manually" enabled="false" userLoginRequired="true">
+                    <preheatingSignalEmissionInterval>4500</preheatingSignalEmissionInterval>
+                </preheating>
+                <freetextsearch allowed="true" enabled="true">
+                    <user_id>7xKgcpva59oPCkQw7yWW</user_id>
+                    <user_code>L8fBMv68cNVnA2Kf2QA8KQ</user_code>
+                    <radius>2000000</radius>
+                    <corridor>1000</corridor>
+                    <title>484552452E636F6D</title>
+                    <max_results>50</max_results>
+                    <homecountry>DE</homecountry>
+                    <url_fts>https://cngw.prod.cd-emea.bmw:5560/cngw/fts-eu</url_fts>
+                    <url_los>https://los.prod.cd-emea.bmw.cloud:5740/localsearch-service/v2/POIs</url_los>
+                    <version>4</version>
+                    <uds_url>https://uds.prod.cd-emea.bmw:5630/uds/datatransfer/v1/ec701037-6c7c-4f93-a077-17c5c51534eb/%resourceId%</uds_url>
+                    <url_img>https://los.prod.cd-emea.bmw.cloud:5740/media</url_img>
+                    <learn>0</learn>
+                    <logo_rating>2</logo_rating>
+                    <star_rating>2</star_rating>
+                    <res_hu>0</res_hu>
+                    <res_rse>1</res_rse>
+                    <max_mb>5</max_mb>
+                </freetextsearch>
+                <message_handling allowed="true" appStartType="manually" enabled="true" userLoginRequired="true">
+                    <message_ttl>2592000</message_ttl>
+                    <homecountry>DE</homecountry>
+                    <service_partner_button enabled="true" third_party="false"/>
+                </message_handling>
+                <auto_time enabled="true">
+                    <proxy_cfg_url/>
+                    <url>https://autotime.prod.cd-emea.bmw:5720/gettime</url>
+                </auto_time>
+                <routing_table>
+                    <net>160.46.254.248/29</net>
+                    <net>160.46.255.0/25</net>
+                    <net>160.46.255.128/25</net>
+                    <net>160.50.11.0/29</net>
+                    <net>160.50.11.240/29</net>
+                    <net>160.50.161.128/25</net>
+                    <net>160.50.201.128/27</net>
+                    <net>160.50.201.192/27</net>
+                    <net>18.197.201.53/32</net>
+                    <net>35.158.59.14/32</net>
+                    <net>18.196.207.206/32</net>
+                    <net>35.157.219.53/32</net>
+                    <net>18.197.92.54/32</net>
+                    <net>18.196.206.202/32</net>
+                    <net>18.196.44.106/32</net>
+                    <net>18.196.116.247/32</net>
+                    <net>35.156.52.100/32</net>
+                    <net>18.197.78.125/32</net>
+                    <net>18.195.244.114/32</net>
+                    <net>18.194.211.234/32</net>
+                    <net>18.196.110.222/32</net>
+                    <net>18.196.252.231/32</net>
+                    <net>18.197.169.101/32</net>
+                    <net>18.184.0.181/32</net>
+                    <net>18.196.129.212/32</net>
+                    <net>35.157.105.205/32</net>
+                    <net>18.197.195.35/32</net>
+                    <net>18.195.6.9/32</net>
+                    <net>18.197.182.49/32</net>
+                    <net>18.196.230.231/32</net>
+                    <net>35.158.34.177/32</net>
+                    <net>18.195.94.90/32</net>
+                    <net>52.58.238.139/32</net>
+                    <net>52.29.185.173/32</net>
+                    <net>18.194.141.215/32</net>
+                    <net>18.197.186.180/32</net>
+                    <net>52.57.163.61/32</net>
+                    <net>18.196.12.4/32</net>
+                    <net>35.158.235.18/32</net>
+                    <net>18.197.16.207/32</net>
+                    <net>18.194.91.50/32</net>
+                    <net>18.195.246.37/32</net>
+                    <net>18.194.29.234/32</net>
+                    <net>18.197.6.46/32</net>
+                    <net>13.125.26.194/32</net>
+                    <net>13.125.189.109/32</net>
+                    <net>13.125.186.91/32</net>
+                    <net>13.125.181.86/32</net>
+                    <net>13.124.22.59/32</net>
+                    <net>13.125.192.10/32</net>
+                    <net>13.125.62.156/32</net>
+                    <net>52.78.143.217/32</net>
+                    <net>15.164.114.52/32</net>
+                    <net6>2406:da12:c39:1a00:81c:6c5a:d7c4:8887/128</net6>
+                    <net6>2a03:1e80:3b:601::/64</net6>
+                    <net6>2a03:1e80:3b:602::/64</net6>
+                    <net6>2a03:1e80:3b:603::/64</net6>
+                    <net6>2a03:1e80:3b:604::/64</net6>
+                    <net6>2a03:1e80:3b:901::/64</net6>
+                    <net6>2a03:1e80:3b:902::/64</net6>
+                    <net6>2a03:1e80:3b:903::/64</net6>
+                    <net6>2a03:1e80:ff9:801::/64</net6>
+                    <net6>2a03:1e80:ff9:901::/64</net6>
+                    <net6>2406:da12:ad3:7600::/56</net6>
+                    <net6>2406:da12:e7:700::/56</net6>
+                    <net6>2a05:d014:c79:6300::/56</net6>
+                    <net6>2a05:d014:fe:ee00::/56</net6>
+                    <net6>2a05:d014:4fb:1f00::/56</net6>
+                    <net6>2a05:d014:eed:6100::/56</net6>
+                </routing_table>
+                <cdas>
+                    <vss enabled="false">
+	<countries>00000000000000000000000004000</countries>
+</vss>
+                    <ldw enabled="false">
+	<countries>000000000000000000000000000010000000800000000c000000000400007ff8</countries>
+</ldw>
+                </cdas>
+                <carplay enabled="true">
+                    <soft_keyboard enabled="true"/>
+                    <soft_phone_keypad enabled="true"/>
+                    <non_music_lists enabled="true"/>
+                    <music_lists enabled="true"/>
+                    <japan_maps enabled="true"/>
+                    <carplay_nav_shortcut enabled="true"/>
+                    <vehicle_status enabled="true"/>
+                </carplay>
+                <navController>
+                    <proxy_cfg_url/>
+                </navController>
+                <online_entertainment>
+                    <proxy_cfg_url/>
+                </online_entertainment>
+                <gracenote>
+                    <service_url>https://gracenote-oe.prod.cd-emea.bmw:5690/gn/service/rest/2/fingerprint</service_url>
+                </gracenote>
+                <cdc_jobmanager enabled="true">
+                    <homeCountry>DE</homeCountry>
+                    <requestUrl>https://cmcs.prod.cd-emea.bmw.cloud:5920/cmvs</requestUrl>
+                </cdc_jobmanager>
+                <pers enabled="true">
+                    <min_transfer_upload_timer_debounce>10</min_transfer_upload_timer_debounce>
+                    <vehicle_trigger_partitions>personalization/update</vehicle_trigger_partitions>
+                    <vehicle_trigger_url>com.bmw.perseus.prod</vehicle_trigger_url>
+                    <ftu_capable>true</ftu_capable>
+                    <one_login_page_country_parameter>DE</one_login_page_country_parameter>
+                    <supported_profiles>3</supported_profiles>
+                    <perseus_url>https://perseus.prod.cd-emea.bmw:5600/service/api/vehicle/v1/</perseus_url>
+                    <credentialinfo_url>https://gcdm.prod.cd-emea.bmw:5655/cac/credentialinfo/v1</credentialinfo_url>
+                    <dpm_url>https://dpm.prod.cd-emea.bmw:5340/dpm/vehicle/v1</dpm_url>
+                    <create_account_url>https://customer.bmwgroup.com/oneid/#/register?client=incar&amp;brand=bmw&amp;country=DE</create_account_url>
+                    <pw_reset_url>https://customer.bmwgroup.com/oneid/#/resetpassword?client=incar&amp;country=DE</pw_reset_url>
+                </pers>
+                <main_app>
+                    <total_disk_space>4294967296</total_disk_space>
+                    <max_download_package_size_kb>20480</max_download_package_size_kb>
+                    <repo_url>https://appr.prod.cd-emea.bmw:5510/npm/registry</repo_url>
+                    <installable_apps>
+	<app supportedECUs="HU">ts_battery_guard</app>
+                        <app supportedECUs="HU">ts_diagnostic_service</app>
+                        <app supportedECUs="HU">ts_rsu_report</app>
+                        <app supportedECUs="HU">x_call</app>
+                        <app supportedECUs="HU">privacy_manager</app>
+                        <app supportedECUs="HU">store</app>
+                        <app supportedECUs="HU">ts_service_partner</app>
+                        <app supportedECUs="HU">message_handling</app>
+                        <app supportedECUs="HU">ts_servicecall</app>
+                        <app supportedECUs="HU">oap-cdc-2018</app>
+                        <app supportedECUs="HU">news</app>
+                        <app supportedECUs="HU,RSE_LEFT,RSE_RIGHT">weather</app>
+                        <app supportedECUs="HU">countryinfo</app>
+                        <app supportedECUs="HU">data-collection</app>
+                        <app supportedECUs="HU">connected-onboard</app>
+                        <app supportedECUs="HU">cmusic</app>
+                        <app supportedECUs="HU">oap-license-app</app>
+                        <app supportedECUs="HU">lbc-parking</app>
+                        <app supportedECUs="HU">smartinterior</app>
+                        <app supportedECUs="HU">mlaptimer</app>
+                        <app supportedECUs="HU">road-ahead</app>
+                        <app supportedECUs="HU,RSE_LEFT,RSE_RIGHT">trigger_service</app>
+</installable_apps>
+                </main_app>
+                <data-collection allowed="true" appStartType="autostart" enabled="true" userLoginRequired="false">
+                    <pmh enabled="false"/>
+                    <lsc enabled="true">
+    <version>1</version>
+<signals>
+        <check_control_messages enabled="1" sendgroup="0" threshold="0"/>
+        <condition_based_services enabled="1" sendgroup="1" threshold="0"/>
+        <cbs_with_service_counter enabled="1" sendgroup="1" threshold="0"/>   
+        <cbs_with_service_counter_day enabled="1" sendgroup="1" threshold="0"/>   
+        <tyre_pressure_target_front_left enabled="1" sendgroup="2" threshold="0"/>
+        <tyre_pressure_target_front_right enabled="1" sendgroup="2" threshold="0"/>
+        <tyre_pressure_target_rear_left enabled="1" sendgroup="2" threshold="0"/>
+        <tyre_pressure_target_rear_right enabled="1" sendgroup="2" threshold="0"/>
+        <pressure_unit_target enabled="1" sendgroup="2" threshold="0"/>
+        <current_parking_level_name enabled="0" sendgroup="5" threshold="0"/>
+        <current_parking_district_name enabled="0" sendgroup="5" threshold="0"/>
+        <current_parking_building_name enabled="0" sendgroup="5" threshold="0"/>
+    </signals>
+                    </lsc>
+                    <fleetdataenergy enabled="false"/>
+                    <tripstatistics enabled="false"/>
+                    <fleetdataelectrificationanalysis enabled="false"/>
+                    <analytics>
+    <loglevel>warn</loglevel>
+</analytics>
+                </data-collection>
+                <personal_poi allowed="false" enabled="false"/>
+                <countryinfo allowed="true" appStartType="manually" enabled="true" userLoginRequired="true">
+                    <homecountry>DE</homecountry>
+                </countryinfo>
+                <news allowed="true" appStartType="manually" enabled="true" userLoginRequired="true">
+                    <homecountry>DE</homecountry>
+                    <service_url>https://cdp.prod.cd-emea.bmw:5590/vehicle/id7/rest/news</service_url>
+                </news>
+                <smartinterior allowed="true" appStartType="autostart" enabled="true" userLoginRequired="false">
+                    <ambientmusic_url>https://ices-ise.prod.cd-emea.bmw.cloud:5140</ambientmusic_url>
+                    <environment>PROD</environment>
+                    <amh>true</amh>
+                    <cc>true</cc>
+                    <exmodes>true</exmodes>
+                    <weatherguard>false</weatherguard>
+                    <si_cmusic>true</si_cmusic>
+                    <si_byod-oap>false</si_byod-oap>
+                    <window>true</window>
+                    <ipa>true</ipa>
+                    <airpurifier>false</airpurifier>
+                    <goh>false</goh>
+                    <festival>true</festival>
+                    <ezone>false</ezone>
+                    <amhlearning>false</amhlearning>
+                    <accreco>false</accreco>
+                    <nlu>true</nlu>
+                </smartinterior>
+                <oap-exchange allowed="false" appStartType="autostart" enabled="false" userLoginRequired="false">
+                    <homeCountry>DE</homeCountry>
+                </oap-exchange>
+                <lbc-parking allowed="true" appStartType="manually" enabled="true" userLoginRequired="true">
+                    <parkingBackendUrl>https://lbc.prod.cd-emea.bmw.cloud:5415/private/prod/parking</parkingBackendUrl>
+                    <goodbyeNotificationSpeedThreshold>2</goodbyeNotificationSpeedThreshold>
+                </lbc-parking>
+                <oap_drive_recorder allowed="false" appStartType="manually" enabled="false" userLoginRequired="true"/>
+                <cd_account>
+                    <homecountry>DE</homecountry>
+                </cd_account>
+                <oap-cdc-2018 allowed="true" appStartType="autostart" enabled="true" userLoginRequired="false">
+                    <homeCountry>DE</homeCountry>
+                </oap-cdc-2018>
+                <cmusic allowed="true" appStartType="autostart" enabled="true" userLoginRequired="false">
+                    <proxy_cfg_url/>
+                    <spotify_enabled>true</spotify_enabled>
+                    <spotify_host>sptfy.prod.cd-emea.bmw.cloud:5830</spotify_host>
+                    <spotify_bitrate>low</spotify_bitrate>
+                    <spotify_throttling_threshold>0</spotify_throttling_threshold>
+                    <bmwmusic_enabled>false</bmwmusic_enabled>
+                    <url>https://avs-ise.prod.cd-emea.bmw:5940</url>
+                    <displayWindowSize>20</displayWindowSize>
+                    <exModeExecutive>37i9dQZF1DWXLeA8Omikj7</exModeExecutive>
+                    <exModeExpressive>37i9dQZF1DWVWiyE9VDkCO</exModeExpressive>
+                    <exModeWellbeing>43udnWdZAGjtMOBlyOrzti</exModeWellbeing>
+                    <maxChannelItemCount>1000</maxChannelItemCount>
+                    <roamingMode>Market</roamingMode>
+                    <minimumStrength>0</minimumStrength>
+                    <networkStrengthDelay>30000</networkStrengthDelay>
+                    <isTestVehicle>false</isTestVehicle>
+                </cmusic>
+                <privacy_manager allowed="true" appStartType="autostart" enabled="true" userLoginRequired="false">
+                    <homecountry>DE</homecountry>
+                    <carsharing_mode>false</carsharing_mode>
+                    <fleetmode1/>
+                    <fleetmode2/>
+                    <fleetmode3/>
+                    <fleetmode4/>
+                    <fleetmode5/>
+                    <SETTINGS> 
+    <CDC_FUTURE_MOBILITY>
+                            <AVAILABLE>true</AVAILABLE>
+                            <SCOPE>USER</SCOPE>
+                            <LEVEL>4</LEVEL>
+                        </CDC_FUTURE_MOBILITY>
+</SETTINGS>
+                </privacy_manager>
+                <connected-onboard allowed="true" appStartType="autostart" enabled="true" userLoginRequired="false">
+                    <endpoints>
+	<tripsCollections>/api/gateway/connected/trip-service/v3/motorist/${usid}/trips-and-locations</tripsCollections>
+	<updateTripCollection>/api/gateway/connected/trip-service/v3/motorist/${usid}/trips/${tripIds}</updateTripCollection>
+	<destinationsCollections>/api/gateway/connected/trip-service/v3/motorist/${usid}/locations</destinationsCollections>
+	<deleteSingleDestination>/api/gateway/connected/trip-service/v3/motorist/${usid}/received-destinations/${destinationId}</deleteSingleDestination>
+	<deleteAllDestinations>/api/gateway/connected/trip-service/v3/motorist/${usid}/received-destinations</deleteAllDestinations>
+	<deleteSingleTrip>/api/gateway/connected/trip-service/v3/motorist/${usid}/trips/${tripId}</deleteSingleTrip>
+	<vehicleDriver>/api/gateway/context-motorist/v1/vehicle/${vin}/driver</vehicleDriver>
+	<deleteVehicleDriver>/api/gateway/context-motorist/v1/vehicle/${vin}/driver/delete</deleteVehicleDriver>
+	<updateVehicleDriver>/api/gateway/context-motorist/v1/vehicle/${vin}/driver/${usid}</updateVehicleDriver>
+	<updateTripInOmc>/api/gateway/connected-functions/onboard/${usid}/navigate</updateTripInOmc>
+	<updateLastMile>/api/gateway/connected-onboard/api/v1/connected-onboard/users/${usid}/last-mile</updateLastMile>
+</endpoints>
+                    <omcUrl>https://myc-vehicle.prod.cd-emea.bmw:5800</omcUrl>
+                    <region>ROW</region>
+                    <toggles>
+        <applets>
+            <alexaApplet>true</alexaApplet>
+            <connectedApplet>true</connectedApplet>
+            <telemetryApplet>false</telemetryApplet>
+        </applets>
+</toggles>
+                </connected-onboard>
+                <route-import allowed="false" appStartType="manually" enabled="false" userLoginRequired="true">
+                    <cdp_base_url>https://cdp.prod.cd-emea.bmw:5590/vehicle/id7/rest/</cdp_base_url>
+                    <region>EMEA</region>
+                </route-import>
+                <parknow allowed="false" appStartType="autostart" enabled="false" userLoginRequired="false">
+                    <topic>
+    <parknow>true</parknow>
+    <rnr>false</rnr>
+</topic>
+                    <cdp_base_url>https://cdp.prod.cd-emea.bmw:5590/vehicle/id7/rest</cdp_base_url>
+                    <cngw_base_url>https://ospi.prod.cd-emea.bmw.cloud:5220/service/api/park-eu</cngw_base_url>
+                    <region>EMEA</region>
+                    <b2vMode>true</b2vMode>
+                    <remoteLogging> 
+    <level>OFF</level>
+</remoteLogging>
+                </parknow>
+                <weather_map allowed="true" enabled="true">
+                    <url>https://weather-bon.prod.cd-emea.bmw:5700/getOnlineWeather</url>
+                </weather_map>
+                <cs_main allowed="false" appStartType="autostart" enabled="false" updateMechanism="APP" userLoginRequired="false"/>
+                <dca enabled="true">
+                    <distanceCurveTrack>400</distanceCurveTrack>
+                </dca>
+                <livelayer_traffic_patterns allowed="false" enabled="false">
+                    <norouteoutsideareabuffer>0</norouteoutsideareabuffer>
+                    <routeoutsideareabuffer>0</routeoutsideareabuffer>
+                    <updatetypes>TRAFFIC_PATTERNS</updatetypes>
+                    <updateregionsforota/>
+                    <maxdownloadsize>5000000</maxdownloadsize>
+                    <retryintervalfixed>10</retryintervalfixed>
+                    <retryintervalvariable>15</retryintervalvariable>
+                    <priority>90</priority>
+                </livelayer_traffic_patterns>
+                <oap-license-app allowed="true" appStartType="manually" enabled="true" userLoginRequired="true"/>
+                <ews enabled="false">
+                    <ewsMessageIdentifiers>4370,4371,4372</ewsMessageIdentifiers>
+                    <ewsMsgRetentionTimeHours>120</ewsMsgRetentionTimeHours>
+                    <leftSquareBracketUCSCode>91</leftSquareBracketUCSCode>
+                    <rightSquareBracketUCSCode>93</rightSquareBracketUCSCode>
+                </ews>
+                <ipa_era enabled="true"/>
+                <route_pref allowed="true" enabled="true">
+                    <route_ini_ti>AVOID</route_ini_ti>
+                    <route_ini_ti_blk>USE</route_ini_ti_blk>
+                    <route_ini_ti_ban>AVOID</route_ini_ti_ban>
+                </route_pref>
+                <ev_settings>
+                    <smart_charge_planner allowed="false" enabled="false"/>
+                    <e_route allowed="false" enabled="false"/>
+                    <charging_information allowed="false" enabled="false"/>
+                    <charging_reservation_and_payment allowed="false" enabled="false"/>
+                    <charging_capabilities>
+    <NONE enabled="true"/>
+    <AC enabled="false"/>
+    <DC enabled="false"/>
+</charging_capabilities>
+                </ev_settings>
+                <banday allowed="false" enabled="false">
+                    <banday_mask>3,4,5</banday_mask>
+                </banday>
+                <volatile_data>
+                    <domainName>nav.ddcntf</domainName>
+                    <channelID>fas/$type/$version/*</channelID>
+                </volatile_data>
+                <fleet-data-collector allowed="false" appStartType="autostart" enabled="false" userLoginRequired="false">
+                    <policy_url>https://odm.prod.cd-emea.bmw:5810/policy-endpoint/api/v1/policy</policy_url>
+                </fleet-data-collector>
+                <trigger_service allowed="true" appStartType="autostart" enabled="true" userLoginRequired="false"/>
+                <rslogo enabled="false">
+                    <url>https://rsl.prod.cd-emea.bmw:5890/rsl/v1/logos</url>
+                    <onl-timer>5</onl-timer>
+                </rslogo>
+                <road-ahead allowed="true" appStartType="autostart" enabled="true" userLoginRequired="false">
+                    <remoteLogging>
+    <level>OFF</level>
+</remoteLogging>
+                    <emergencyCorridorBackendUrl>https://cngw.prod.cd-emea.bmw:5560/cngw/lbs?OP=ecr</emergencyCorridorBackendUrl>
+                    <emergencyCorridorStatisticsUrl>https://cngw.prod.cd-emea.bmw:5560/cngw/lbs?OP=ecrst</emergencyCorridorStatisticsUrl>
+                    <emergencyCorridorStatisticsAuthPassword>c3RhdDpteENTYm5GalVZZUU5TjRL</emergencyCorridorStatisticsAuthPassword>
+                    <eDriveZoneBackendUrl>https://ezones.prod.cd-emea.bmw.cloud:5170/ezones-prd</eDriveZoneBackendUrl>
+                    <topic>
+    <emergencyCorridor>true</emergencyCorridor>
+    <edriveZone>false</edriveZone>
+    <safetyCameras>false</safetyCameras>
+</topic>
+                    <safetyCamerasExpiration>
+    <trial>false</trial>
+    <expiryInterval>999</expiryInterval>
+</safetyCamerasExpiration>
+                    <safetyCamerasGeohashPrecision>5</safetyCamerasGeohashPrecision>
+                    <safetyCamerasTilesTtl>300000</safetyCamerasTilesTtl>
+                    <safetyCamerasBackendUrl>https://rah.prod.cd-emea.bmw.cloud:5320/api/safetyCams</safetyCamerasBackendUrl>
+                    <safetyCamerasStoreGlobal>https://www.bmw-connecteddrive.com</safetyCamerasStoreGlobal>
+                    <sameLocationThreshold>50</sameLocationThreshold>
+                </road-ahead>
+                <chargenow allowed="false" appStartType="autostart" enabled="false" userLoginRequired="false">
+                    <topic>
+    <contract>false</contract>
+    <reservation>false</reservation>
+    <chargingDetails>false</chargingDetails>
+</topic>
+                </chargenow>
+                <smart-fuelling allowed="false" appStartType="manually" enabled="false" userLoginRequired="false"/>
+                <fleet-driver-interaction allowed="false" appStartType="manually" enabled="false" userLoginRequired="false">
+                    <policyservice_baseurl>https://odm.prod.cd-emea.bmw:5810/policyservice/api/</policyservice_baseurl>
+                </fleet-driver-interaction>
+                <androidauto enabled="true">
+                    <limitedUI_video enabled="false"/>
+                    <limitedUI_keyboard enabled="true"/>
+                    <limitedUI_voice enabled="true"/>
+                    <limitedUI_setup enabled="false"/>
+                    <limitedUI_longtext enabled="false"/>
+                    <widget_UI enabled="false"/>
+                    <japan_ETC enabled="true"/>
+                    <optional_vehicle_data enabled="true"/>
+                    <guiding_data enabled="true">ENUM</guiding_data>
+                    <poi_handover enabled="false"/>
+                    <navi_menu_entry enabled="true"/>
+                    <telephone_menu_entry enabled="true"/>
+                    <ok_google enabled="false"/>
+                </androidauto>
+                <paragon_vr enabled="false"/>
+                <powerup-oap allowed="false" appStartType="manually" enabled="false" userLoginRequired="false"/>
+                <routing_online allowed="true" enabled="true">
+                    <url>https://naas.prod.cd-emea.bmw.cloud:5150/service/api/eu/2.4/</url>
+                    <polling_interval>60</polling_interval>
+                    <countries>000000000000000000008002408010000421800000000d8000c0000508007ff8</countries>
+                    <traffic_on_route>initial</traffic_on_route>
+                    <response_format>protobuf3</response_format>
+                    <silent_guiding>false</silent_guiding>
+                </routing_online>
+                <e_route_ms allowed="false" enabled="false">
+                    <url>https://eroute.prod.cd-emea.bmw.cloud:5290/service/api/eroute</url>
+                    <maxSegmentLength>500</maxSegmentLength>
+                    <minimumStateOfChargeInPercentage>10</minimumStateOfChargeInPercentage>
+                    <responseTimeout>60</responseTimeout>
+                </e_route_ms>
+                <customer_feedback allowed="false" appStartType="manually" enabled="false" userLoginRequired="true">
+                    <url>https://ofcm.prod.cd-emea.bmw:5420</url>
+                </customer_feedback>
+            </data>
+        </set>
+        <set>
+            <filter type="or">
+                <nmcc>404</nmcc>
+                <nmcc>430</nmcc>
+                <nmcc>276</nmcc>
+                <nmcc>213</nmcc>
+                <nmcc>505</nmcc>
+                <nmcc>232</nmcc>
+                <nmcc>206</nmcc>
+                <nmcc>218</nmcc>
+                <nmcc>724</nmcc>
+                <nmcc>284</nmcc>
+                <nmcc>302</nmcc>
+                <nmcc>219</nmcc>
+                <nmcc>280</nmcc>
+                <nmcc>230</nmcc>
+                <nmcc>238</nmcc>
+                <nmcc>431</nmcc>
+                <nmcc>248</nmcc>
+                <nmcc>244</nmcc>
+                <nmcc>208</nmcc>
+                <nmcc>262</nmcc>
+                <nmcc>266</nmcc>
+                <nmcc>234</nmcc>
+                <nmcc>202</nmcc>
+                <nmcc>216</nmcc>
+                <nmcc>274</nmcc>
+                <nmcc>272</nmcc>
+                <nmcc>425</nmcc>
+                <nmcc>222</nmcc>
+                <nmcc>440</nmcc>
+                <nmcc>419</nmcc>
+                <nmcc>247</nmcc>
+                <nmcc>295</nmcc>
+                <nmcc>246</nmcc>
+                <nmcc>270</nmcc>
+                <nmcc>294</nmcc>
+                <nmcc>502</nmcc>
+                <nmcc>278</nmcc>
+                <nmcc>334</nmcc>
+                <nmcc>212</nmcc>
+                <nmcc>297</nmcc>
+                <nmcc>204</nmcc>
+                <nmcc>530</nmcc>
+                <nmcc>242</nmcc>
+                <nmcc>260</nmcc>
+                <nmcc>268</nmcc>
+                <nmcc>226</nmcc>
+                <nmcc>250</nmcc>
+                <nmcc>292</nmcc>
+                <nmcc>420</nmcc>
+                <nmcc>220</nmcc>
+                <nmcc>525</nmcc>
+                <nmcc>231</nmcc>
+                <nmcc>293</nmcc>
+                <nmcc>655</nmcc>
+                <nmcc>450</nmcc>
+                <nmcc>214</nmcc>
+                <nmcc>240</nmcc>
+                <nmcc>228</nmcc>
+                <nmcc>466</nmcc>
+                <nmcc>424</nmcc>
+                <nmcc>520</nmcc>
+                <nmcc>426</nmcc>
+                <nmcc>405</nmcc>
+                <nmcc>406</nmcc>
+                <nmcc>422</nmcc>
+                <nmcc>427</nmcc>
+                <nmcc>647</nmcc>
+                <nmcc>340</nmcc>
+                <nmcc>362</nmcc>
+                <nmcc>742</nmcc>
+                <nmcc>510</nmcc>
+                <nmcc>604</nmcc>
+                <nmcc>401</nmcc>
+                <nmcc>452</nmcc>
+                <nmcc>515</nmcc>
+                <nmcc>730</nmcc>
+                <nmcc>732</nmcc>
+                <nmcc>716</nmcc>
+            </filter>
+            <data>
+                <rsu allowed="true"/>
+            </data>
+        </set>
+        <set>
+            <filter type="or">
+                <nmcc>206</nmcc>
+                <nmcc>284</nmcc>
+                <nmcc>724</nmcc>
+                <nmcc>228</nmcc>
+                <nmcc>230</nmcc>
+                <nmcc>262</nmcc>
+                <nmcc>238</nmcc>
+                <nmcc>214</nmcc>
+                <nmcc>244</nmcc>
+                <nmcc>208</nmcc>
+                <nmcc>234</nmcc>
+                <nmcc>202</nmcc>
+                <nmcc>216</nmcc>
+                <nmcc>272</nmcc>
+                <nmcc>222</nmcc>
+                <nmcc>270</nmcc>
+                <nmcc>334</nmcc>
+                <nmcc>204</nmcc>
+                <nmcc>242</nmcc>
+                <nmcc>530</nmcc>
+                <nmcc>260</nmcc>
+                <nmcc>232</nmcc>
+                <nmcc>268</nmcc>
+                <nmcc>226</nmcc>
+                <nmcc>240</nmcc>
+                <nmcc>525</nmcc>
+                <nmcc>293</nmcc>
+                <nmcc>231</nmcc>
+                <nmcc>286</nmcc>
+                <nmcc>655</nmcc>
+                <nmcc>440</nmcc>
+                <nmcc>441</nmcc>
+                <nmcc>466</nmcc>
+                <nmcc>505</nmcc>
+                <nmcc>219</nmcc>
+                <nmcc>246</nmcc>
+                <nmcc>247</nmcc>
+                <nmcc>248</nmcc>
+            </filter>
+            <data>
+                <livelayer_poi allowed="true"/>
+            </data>
+        </set>
+        <set>
+            <filter type="or">
+                <nmcc>505</nmcc>
+                <nmcc>232</nmcc>
+                <nmcc>206</nmcc>
+                <nmcc>244</nmcc>
+                <nmcc>208</nmcc>
+                <nmcc>262</nmcc>
+                <nmcc>216</nmcc>
+                <nmcc>272</nmcc>
+                <nmcc>222</nmcc>
+                <nmcc>204</nmcc>
+                <nmcc>260</nmcc>
+                <nmcc>293</nmcc>
+                <nmcc>214</nmcc>
+                <nmcc>240</nmcc>
+                <nmcc>228</nmcc>
+                <nmcc>234</nmcc>
+                <nmcc>302</nmcc>
+                <nmcc>310</nmcc>
+            </filter>
+            <data>
+                <rslogo enabled="true"/>
+            </data>
+        </set>
+    </bmwprov>
+<Signature>RG6UhOUpwxYTFJwInDFDcq5NyNpHFPKAWBj5xpMH0BsSv68PmyXpofzr0zBgM+9VkSJpm1MHlNZz/6EzeO89G+LMJetQkVd0T4tSa/iuNIiGrPO+w4WAPN159dvMSFuktf7jee3pExmROsdt+30fnjN9uOKLea6uSknX0eRiZ6UuhJMFLilcajqRN/3Ybc53v0pe2Tj1anDXUPeUzsjfsXYFrmVPiJm9mK4VKgAGFqG2Zoz1MVNqsmiMLh7efFofDyRq1VMPO8a+Ct1nO2pnSbyn5lsw1r75QceOpX31U/HI4qPn59eJsGX3w5Y9hGr4XzB+6yKt90EIDceF0jGFAw==</Signature><SignerCertificate>-----BEGIN CERTIFICATE-----MIIDxDCCAqygAwIBAgIBAjANBgkqhkiG9w0BAQsFADBkMQswCQYDVQQGEwJERTESMBAGA1UECgwJQk1XIEdyb3VwMRYwFAYDVQQLDA1WZWhpY2xlUEtJLUNBMRMwEQYDVQQIDApQcm9kdWN0aW9uMRQwEgYDVQQDDAtTaWduaW5nLUNBMTAgFw03MDAxMDEwMDAxMDBaGA85OTk5MTIzMTIzNTkwMFowgZAxCzAJBgNVBAYTAkRFMREwDwYDVQQKDAhCTVdHcm91cDEiMCAGA1UECwwZVmVoaWNsZVBLSS1TaWduaW5nU2VydmljZTETMBEGA1UECAwKUHJvZHVjdGlvbjENMAsGA1UEBwwERU1FQTEmMCQGA1UEAwwdUHJvdmlzaW9uaW5nLUVNRUEtU2lTZS1QUk9ELTEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCOtV9fg7KhyEA52B2nbOj5RupLqoAsb1HP5FKjsepTg4Cri2fHKacqFTqHa/zI8gr0P6x7OZRuodGGAq0WP4wPMdcPL1DoX02V63qkdPb5OlgmHcRl5KJCb329MMcWNX+0hgZIq9Csb13vkFoTQlu65ORlmTG1EIndJzbMr3XRasrU7xbLYx+hZsoinc9oPjFxKmEPYjsGSTlpxWHIQG2r1hfBFYgNg78Tvhqf6dxVcQgAR8OOz/eb9kC9lTlV2+Y81XxD8n7FmEK8vBVre3tmpNjTSAQe/piVzGnHSQnqirIPZx6MlukhgXfmCxw87ZvvYtN2oWNjrM77wnZgXOtzAgMBAAGjUjBQMB0GA1UdDgQWBBSVXTJK9KvunvtgAhGQVvWyBpalyDAfBgNVHSMEGDAWgBTZiq7VjHaSrfTCyEiq0H1HQsdEpTAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAAlmDTkuK5gRJgmwBJNroELPLQhZx+oph87uFkbdZF4NSxOxahHOUfh9sexE8s45+yYtpYZZyITL2tgBeDkiqCHUQ5oLsVGX6BSLGD2/VUVokm1G4v/+T3WYZZSHGBmNVwpbYH3mGZFyvazJtC0KWMELn/HAwYYHtBvnq4lZnYpOSyWFL2RT1QG5NgmrEt4rwwSuoB90RVHZ21Putg4/zeBKkOKAEKr9/KnFJigv2CmDPl13HPBLVhJzMhMpB8h6DA1iAgFuN+LIWlF5odubuCOrLVIByaz57S93WbsGbxoz4EV0PlIn2dnBO8Lo2cCChKNBZW4fNKbY42o7N9zqTrk=-----END CERTIFICATE-----</SignerCertificate></bmwprovsigned>

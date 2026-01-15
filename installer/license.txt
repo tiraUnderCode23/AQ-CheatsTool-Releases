@@ -1,0 +1,100 @@
+AQ CHEATSTOOL END USER LICENSE AGREEMENT (EULA)
+================================================
+
+Copyright (c) 2024-2026 AQ///BIMMER. All rights reserved.
+
+IMPORTANT: Please read this license agreement carefully before 
+installing or using AQ CheatsTool.
+
+
+1. LICENSE GRANT
+----------------
+AQ///BIMMER grants you a limited, non-exclusive, non-transferable
+license to install and use AQ CheatsTool (the "Software") on a
+single device, subject to the terms of this agreement.
+
+
+2. PERMITTED USES
+-----------------
+You may use the Software for:
+- BMW vehicle diagnostics and coding
+- Personal vehicle customization
+- Welcome Light configuration
+- MGU unlock procedures
+- Reading and interpreting CC-ID messages
+
+
+3. RESTRICTIONS
+---------------
+You may NOT:
+- Copy, modify, or distribute the Software
+- Reverse engineer or decompile the Software
+- Remove any copyright or proprietary notices
+- Use the Software for commercial purposes without authorization
+- Share activation keys or bypass licensing mechanisms
+
+
+4. DISCLAIMER OF WARRANTIES
+---------------------------
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
+AQ///BIMMER DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE.
+
+
+5. LIMITATION OF LIABILITY
+--------------------------
+AQ///BIMMER SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM
+THE USE OF THIS SOFTWARE, INCLUDING BUT NOT LIMITED TO:
+- Vehicle damage or malfunction
+- Loss of data
+- Financial losses
+- Consequential or incidental damages
+
+
+6. USER RESPONSIBILITY
+----------------------
+By using this Software, you acknowledge that:
+- Vehicle modifications may void manufacturer warranty
+- Some features may not be legal in all jurisdictions
+- You are solely responsible for any modifications made
+- Professional assistance is recommended for complex procedures
+
+
+7. ACTIVATION AND LICENSING
+---------------------------
+- Each license is tied to a single device
+- Activation requires valid credentials
+- Unauthorized access attempts are logged
+- Violations may result in license revocation
+
+
+8. SUPPORT
+----------
+For technical support, please contact:
+- WhatsApp: +964 780 022 3355
+- Email: support@aqbimmer.com
+
+
+9. TERMINATION
+--------------
+This license is effective until terminated. It will terminate
+automatically if you fail to comply with any term of this
+agreement. Upon termination, you must destroy all copies of
+the Software.
+
+
+10. GOVERNING LAW
+-----------------
+This agreement shall be governed by applicable laws.
+
+
+By installing AQ CheatsTool, you acknowledge that you have read,
+understood, and agree to be bound by the terms of this license.
+
+
+AQ///BIMMER
+BMW Professional Diagnostic Solutions
+www.aqbimmer.com
+
+Version 2.0.0

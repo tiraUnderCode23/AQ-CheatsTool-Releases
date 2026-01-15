@@ -1,0 +1,2 @@
+usr\lib\libSWESignatureVerify.so
+usr\bin\BAC4x_VSTAR_i386_Eth_Application.out
