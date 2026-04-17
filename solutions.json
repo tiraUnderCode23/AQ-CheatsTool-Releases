@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.1.0",
-    "updated_at": "2026-04-17T07:49:22.343908Z",
+    "updated_at": "2026-04-17T11:11:17.660922Z",
     "description": "Solutions module data, downloads, and ECU display configuration."
   },
   "ecu_display_config": {
@@ -70,95 +70,6 @@
         "EVO",
         "HDD",
         "PDF"
-      ]
-    },
-    {
-      "id": "mgu-recovery-walkthrough",
-      "type": "tutorial",
-      "title": "MGU Recovery Walkthrough",
-      "description": "A fast, organized walkthrough for in-shop programmers with reference images and short copyable notes.",
-      "category": "Tutorial",
-      "tags": [
-        "MGU",
-        "Recovery",
-        "Step-by-step"
-      ],
-      "steps": [
-        {
-          "title": "Prepare session files",
-          "text": "Make sure the required activation files are ready and the device is on a stable power source before starting any programming session.",
-          "image": "assets/images/mgu1.jpg"
-        },
-        {
-          "title": "Read the unit and verify identity",
-          "text": "Read the HU information first, then verify the path is actually MGU before any write or activation.",
-          "image": "assets/images/mgu2.jpg"
-        },
-        {
-          "title": "Finalize the procedure",
-          "text": "After completing the modification, reboot and verify stability and basic functionality, then export the report for the customer.",
-          "image": "assets/images/mgu3.jpg"
-        }
-      ]
-    },
-    {
-      "id": "esys-patch-flow",
-      "type": "tutorial",
-      "title": "E-Sys Patch Flow",
-      "description": "A simplified walkthrough of the E-Sys workflow with quick reference images.",
-      "category": "Tutorial",
-      "tags": [
-        "E-Sys",
-        "Patch",
-        "Workshop"
-      ],
-      "steps": [
-        {
-          "title": "Open the session",
-          "blocks": [
-            {
-              "type": "text",
-              "value": "Start by opening the correct session for the vehicle, then choose the matching target for the model before any CAFD read."
-            },
-            {
-              "type": "image",
-              "value": "assets/images/esys_1.png",
-              "caption": "E-Sys session selection screen"
-            },
-            {
-              "type": "link",
-              "value": "https://www.bimmerfest.com/threads/guide-selecting-the-correct-prg-file-for-fxx-jobs-in-tool32.704094/",
-              "caption": "BimmerFest guide: selecting the correct .prg file"
-            }
-          ]
-        },
-        {
-          "title": "Read FA / SVT",
-          "blocks": [
-            {
-              "type": "text",
-              "value": "Perform a full read of FA and SVT, then keep a backup before editing any Coding Data."
-            },
-            {
-              "type": "image",
-              "value": "assets/images/esys_3.png"
-            }
-          ]
-        },
-        {
-          "title": "Write the modifications",
-          "blocks": [
-            {
-              "type": "text",
-              "value": "After reviewing values, write only the required change and verify the operation completed without CAFD errors."
-            },
-            {
-              "type": "image",
-              "value": "assets/images/esys_5.png",
-              "caption": "Successful CAFD write confirmation"
-            }
-          ]
-        }
       ]
     }
   ],
