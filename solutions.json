@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.1.0",
-    "updated_at": "2026-04-17T11:11:24.506715Z",
+    "updated_at": "2026-04-17T12:32:38.409548Z",
     "description": "Solutions module data, downloads, and ECU display configuration."
   },
   "ecu_display_config": {
@@ -73,5 +73,14 @@
       ]
     }
   ],
-  "downloads": []
+  "downloads": [
+    {
+      "id": "6031d539-6331-47e6-9c68-25c253dbdf7b",
+      "title": "israel JOY Navigation fules 2026",
+      "description": "israel JOY Navigation fules 2026",
+      "url": "https://mega.nz/file/cMt3HCKb#bikMMEmvhGXdgImgSNzvjCyJ1L7owBZy1tTAUrdxbdY",
+      "category": "Navigation",
+      "image": "https://raw.githubusercontent.com/tiraUnderCode23/AQ-CheatsTool-Releases/main/uploads/images/1776429155571_JPEG_20260413_192825_5519280689558522979.jpg"
+    }
+  ]
 }
