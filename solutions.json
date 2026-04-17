@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.1.0",
-    "updated_at": "2026-04-17T11:11:17.660922Z",
+    "updated_at": "2026-04-17T11:11:24.506715Z",
     "description": "Solutions module data, downloads, and ECU display configuration."
   },
   "ecu_display_config": {
