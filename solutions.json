@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "version": "1.1.0",
+    "updated_at": "2026-04-16T00:00:00Z",
+    "description": "Solutions module data, downloads, and ECU display configuration."
+  },
+  "ecu_display_config": {
+    "priority_modules": ["DKOMBI", "DKOMBI4", "BDC", "BDC2", "BDC3"],
+    "canonical_raw_keys": {
+      "DKOMBI": "DKOMBI",
+      "DKOMBI4": "DKOMBI4",
+      "BDC": "BDC",
+      "BDC2": "BDC2",
+      "BDC3": "BDC3",
+      "HU / MGU": "MGU"
+    },
+    "aliases": {
+      "DKOMBI": ["DKOMBI", "KOMBI_6WB"],
+      "DKOMBI4": ["DKOMBI4", "KOMBI_G", "KOMBI_G20"],
+      "BDC": ["BDC", "BDC_BODY"],
+      "BDC2": ["BDC2", "BDC2_BODY"],
+      "BDC3": ["BDC3", "BDC3_BODY"],
+      "HU / MGU": ["MGU", "HU_MGU", "MGU21", "MGU22", "HU_MGU21", "HU_MGU22"]
+    },
+    "legacy_hu_modules": ["HU_CIC/NBT", "HU_ENTRY/HU_CIC/NBT", "CMB_MEDIA"]
+  },
+  "solutions": [
+    {
+      "id": "evo-hdd-reference",
+      "type": "pdf",
+      "title": "EVO HDD Reference PDF",
+      "description": "Quick workshop reference for HDD / EVO procedures. Opens the local file directly or downloads it for later use.",
+      "category": "Reference",
+      "asset_path": "evo hhd.pdf",
+      "download_url": "https://github.com/tiraUnderCode23/AQxheaTool2",
+      "tags": ["EVO", "HDD", "PDF"]
+    },
+    {
+      "id": "mgu-recovery-walkthrough",
+      "type": "tutorial",
+      "title": "MGU Recovery Walkthrough",
+      "description": "A fast, organized walkthrough for in-shop programmers with reference images and short copyable notes.",
+      "category": "Tutorial",
+      "tags": ["MGU", "Recovery", "Step-by-step"],
+      "steps": [
+        {
+          "title": "Prepare session files",
+          "text": "Make sure the required activation files are ready and the device is on a stable power source before starting any programming session.",
+          "image": "assets/images/mgu1.jpg"
+        },
+        {
+          "title": "Read the unit and verify identity",
+          "text": "Read the HU information first, then verify the path is actually MGU before any write or activation.",
+          "image": "assets/images/mgu2.jpg"
+        },
+        {
+          "title": "Finalize the procedure",
+          "text": "After completing the modification, reboot and verify stability and basic functionality, then export the report for the customer.",
+          "image": "assets/images/mgu3.jpg"
+        }
+      ]
+    },
+    {
+      "id": "esys-patch-flow",
+      "type": "tutorial",
+      "title": "E-Sys Patch Flow",
+      "description": "A simplified walkthrough of the E-Sys workflow with quick reference images.",
+      "category": "Tutorial",
+      "tags": ["E-Sys", "Patch", "Workshop"],
+      "steps": [
+        {
+          "title": "Open the session",
+          "blocks": [
+            {
+              "type": "text",
+              "value": "Start by opening the correct session for the vehicle, then choose the matching target for the model before any CAFD read."
+            },
+            {
+              "type": "image",
+              "value": "assets/images/esys_1.png",
+              "caption": "E-Sys session selection screen"
+            },
+            {
+              "type": "link",
+              "value": "https://www.bimmerfest.com/threads/guide-selecting-the-correct-prg-file-for-fxx-jobs-in-tool32.704094/",
+              "caption": "BimmerFest guide: selecting the correct .prg file"
+            }
+          ]
+        },
+        {
+          "title": "Read FA / SVT",
+          "blocks": [
+            {
+              "type": "text",
+              "value": "Perform a full read of FA and SVT, then keep a backup before editing any Coding Data."
+            },
+            {
+              "type": "image",
+              "value": "assets/images/esys_3.png"
+            }
+          ]
+        },
+        {
+          "title": "Write the modifications",
+          "blocks": [
+            {
+              "type": "text",
+              "value": "After reviewing values, write only the required change and verify the operation completed without CAFD errors."
+            },
+            {
+              "type": "image",
+              "value": "assets/images/esys_5.png",
+              "caption": "Successful CAFD write confirmation"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "id": "putty-download",
+      "title": "PuTTY",
+      "description": "A lightweight, handy tool for quick Telnet / SSH sessions during diagnostic and setup operations.",
+      "url": "https://www.putty.org/",
+      "category": "Tool"
+    },
+    {
+      "id": "aq-release-repo",
+      "title": "AQ Release Repository",
+      "description": "Direct link to the tool's files and release repository for easy access to required packages.",
+      "url": "https://github.com/tiraUnderCode23/AQxheaTool2",
+      "category": "Repository"
+    }
+  ]
+}
