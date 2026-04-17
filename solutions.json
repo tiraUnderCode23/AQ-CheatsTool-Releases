@@ -1,11 +1,17 @@
 {
   "metadata": {
     "version": "1.1.0",
-    "updated_at": "2026-04-16T00:00:00Z",
+    "updated_at": "2026-04-17T07:49:22.343908Z",
     "description": "Solutions module data, downloads, and ECU display configuration."
   },
   "ecu_display_config": {
-    "priority_modules": ["DKOMBI", "DKOMBI4", "BDC", "BDC2", "BDC3"],
+    "priority_modules": [
+      "DKOMBI",
+      "DKOMBI4",
+      "BDC",
+      "BDC2",
+      "BDC3"
+    ],
     "canonical_raw_keys": {
       "DKOMBI": "DKOMBI",
       "DKOMBI4": "DKOMBI4",
@@ -15,14 +21,41 @@
       "HU / MGU": "MGU"
     },
     "aliases": {
-      "DKOMBI": ["DKOMBI", "KOMBI_6WB"],
-      "DKOMBI4": ["DKOMBI4", "KOMBI_G", "KOMBI_G20"],
-      "BDC": ["BDC", "BDC_BODY"],
-      "BDC2": ["BDC2", "BDC2_BODY"],
-      "BDC3": ["BDC3", "BDC3_BODY"],
-      "HU / MGU": ["MGU", "HU_MGU", "MGU21", "MGU22", "HU_MGU21", "HU_MGU22"]
+      "DKOMBI": [
+        "DKOMBI",
+        "KOMBI_6WB"
+      ],
+      "DKOMBI4": [
+        "DKOMBI4",
+        "KOMBI_G",
+        "KOMBI_G20"
+      ],
+      "BDC": [
+        "BDC",
+        "BDC_BODY"
+      ],
+      "BDC2": [
+        "BDC2",
+        "BDC2_BODY"
+      ],
+      "BDC3": [
+        "BDC3",
+        "BDC3_BODY"
+      ],
+      "HU / MGU": [
+        "MGU",
+        "HU_MGU",
+        "MGU21",
+        "MGU22",
+        "HU_MGU21",
+        "HU_MGU22"
+      ]
     },
-    "legacy_hu_modules": ["HU_CIC/NBT", "HU_ENTRY/HU_CIC/NBT", "CMB_MEDIA"]
+    "legacy_hu_modules": [
+      "HU_CIC/NBT",
+      "HU_ENTRY/HU_CIC/NBT",
+      "CMB_MEDIA"
+    ]
   },
   "solutions": [
     {
@@ -33,7 +66,11 @@
       "category": "Reference",
       "asset_path": "evo hhd.pdf",
       "download_url": "https://github.com/tiraUnderCode23/AQxheaTool2",
-      "tags": ["EVO", "HDD", "PDF"]
+      "tags": [
+        "EVO",
+        "HDD",
+        "PDF"
+      ]
     },
     {
       "id": "mgu-recovery-walkthrough",
@@ -41,7 +78,11 @@
       "title": "MGU Recovery Walkthrough",
       "description": "A fast, organized walkthrough for in-shop programmers with reference images and short copyable notes.",
       "category": "Tutorial",
-      "tags": ["MGU", "Recovery", "Step-by-step"],
+      "tags": [
+        "MGU",
+        "Recovery",
+        "Step-by-step"
+      ],
       "steps": [
         {
           "title": "Prepare session files",
@@ -66,7 +107,11 @@
       "title": "E-Sys Patch Flow",
       "description": "A simplified walkthrough of the E-Sys workflow with quick reference images.",
       "category": "Tutorial",
-      "tags": ["E-Sys", "Patch", "Workshop"],
+      "tags": [
+        "E-Sys",
+        "Patch",
+        "Workshop"
+      ],
       "steps": [
         {
           "title": "Open the session",
@@ -117,20 +162,5 @@
       ]
     }
   ],
-  "downloads": [
-    {
-      "id": "putty-download",
-      "title": "PuTTY",
-      "description": "A lightweight, handy tool for quick Telnet / SSH sessions during diagnostic and setup operations.",
-      "url": "https://www.putty.org/",
-      "category": "Tool"
-    },
-    {
-      "id": "aq-release-repo",
-      "title": "AQ Release Repository",
-      "description": "Direct link to the tool's files and release repository for easy access to required packages.",
-      "url": "https://github.com/tiraUnderCode23/AQxheaTool2",
-      "category": "Repository"
-    }
-  ]
+  "downloads": []
 }
