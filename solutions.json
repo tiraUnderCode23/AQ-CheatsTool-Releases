@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.1.0",
-    "updated_at": "2026-04-17T12:37:34.432603Z",
+    "updated_at": "2026-04-17T13:04:15.503759Z",
     "description": "Solutions module data, downloads, and ECU display configuration."
   },
   "ecu_display_config": {
@@ -70,6 +70,53 @@
         "EVO",
         "HDD",
         "PDF"
+      ]
+    },
+    {
+      "id": "376ba3be-378d-49e7-8d7d-69339439d483",
+      "type": "tutorial",
+      "title": "MG1/MD1 ISN Shared by AutoExplain",
+      "description": "MG1/MD1 ISN REPLACEMENT VIA TOOL32 |",
+      "category": "Tutorial",
+      "tags": [
+        "isn"
+      ],
+      "steps": [
+        {
+          "title": "Open Tool32",
+          "text": "Open Tool32 → Load DME_BX8.prg",
+          "image": "https://raw.githubusercontent.com/tiraUnderCode23/AQ-CheatsTool-Releases/main/uploads/images/1776430512916_anydesk_20260417-154830-003.png"
+        },
+        {
+          "title": "Navigate to job",
+          "text": "steuern_ews4_sk",
+          "image": "https://raw.githubusercontent.com/tiraUnderCode23/AQ-CheatsTool-Releases/main/uploads/images/1776430567967_IMG-20260408-WA0024.jpg"
+        },
+        {
+          "title": "Unlock DME using old ISN",
+          "text": "UNLOCK_CLIENT_SK (used ISN)",
+          "image": "https://raw.githubusercontent.com/tiraUnderCode23/AQ-CheatsTool-Releases/main/uploads/images/1776430657168_Screenshot_20260417_155716_Gallery.jpg"
+        },
+        {
+          "title": "Write new ISN:",
+          "text": "WRITE_CLIENT_SK (new ISN)\n- WRITE_SERVER_SK (new ISN)"
+        },
+        {
+          "title": "Lock the system",
+          "text": "LOCK_CLIENT_SK (new ISN)\n- LOCK_SERVER_SK (new ISN)"
+        },
+        {
+          "title": "ISN Status Check (EWS5)",
+          "text": "+ Job: STATUS_LESEN → ARG;EWS_DME_LESEN\n+ 01 = ISN not reset\n+ 00 = ISN synchronized successfully"
+        },
+        {
+          "title": "✅ Additional Notes:",
+          "text": "Flash & encode DME first using E-Sys\n- Disable FSC → reset VIN to 00000000000000000\n- Extract ISN from dump (hex → decimal)\n- Use MG1 WRK.TST for calculation & ISN injection"
+        },
+        {
+          "title": "⚠️ Technical Notes",
+          "text": "Identify correct Master (12) / Slave (13) when injecting ISN\n- Incorrect ISN → no start or sync errors\n- Always keep original ISN as backup"
+        }
       ]
     }
   ],
